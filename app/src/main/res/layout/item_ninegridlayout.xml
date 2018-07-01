@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        //左边部分 （头像 ）
+        <ImageView
+            android:src="@drawable/head1"
+            android:id="@+id/head"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+
+        //右边部分（昵称+时间+文本+图片+地址+点赞评论）
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            //昵称name                  廖俊涛（黑色加粗）
+            <TextView
+                android:id="@+id/name"
+                android:text="廖俊涛"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            //时间time
+            <TextView
+                android:id="@+id/time"
+                android:text="10:14"
+                android:textColor="#808080"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"/>
+
+            //文本内容
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:singleLine="false"
+                android:layout_marginTop="6dp"
+                android:text="想你时过得太慢，无人做伴。自然而然变成了习惯。大头啦啦啦啦"/>
+
+            //图片
+            <com.example.lizhy.schoolfellow.NineGridlayout
+                android:layout_marginTop="8dp"
+                android:id="@+id/iv_ngrid_layout"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+            <com.example.lizhy.schoolfellow.CustomImageView
+                android:layout_marginTop="8dp"
+                android:id="@+id/iv_oneimage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            //地址
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/location" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "中山大学东校区教学楼"
+                    android:textColor="#6D7EA2"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="8dp"/>
+
+            </LinearLayout>
+
+            //（点赞 + 评论）
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="190dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:id="@+id/like"
+                    android:src="@drawable/like" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#808080"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="2dp"
+                    android:text="6" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="40dp"
+                    android:id="@+id/comment"
+                    android:src="@drawable/comment"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#808080"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="2dp"
+                    android:text="3" />
+
+
+            </LinearLayout>
+
+
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
